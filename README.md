@@ -65,6 +65,7 @@ This repository implements a cyber-risk data engineering pipeline using NVD, CIS
 
 ```bash
 python3 -m pip install -r requirements.txt
+python3 -m pip install pyarrow
 ```
 
 2. Ingest source data
@@ -74,6 +75,13 @@ python3 src/ingestion/nvd/ingest_nvd.py --days 30
 python3 src/ingestion/cisa_kev/fetch_cisa_kev.py
 python3 src/ingestion/epss/fetch_epss.py
 python3 src/ingestion/cvelist/fetch_cvelist_v5.py
+```
+
+Align expected raw file names for downstream transformation scripts:
+
+```bash
+cp "$(ls -t data/raw/nvd/nvd_cves_raw_*.json | head -n 1)" data/raw/nvd/nvdcve-2.0-2026.json
+cp data/raw/cisa_kev/known_exploited_vulnerabilities.json data/raw/cisa_kev/cisa_kev_catalog.json
 ```
 
 3. Start MongoDB and load raw snapshots
@@ -162,14 +170,16 @@ This repo includes `render.yaml` for Blueprint deployment.
 
 Recommended Render environment variables:
 - `ALLOWED_ORIGINS=https://<your-github-pages-domain>`
-- `AUTOLOAD_DUCKDB=1`
+- `AUTOLOAD_DUCKDB=0` (recommended when committing a prebuilt `data/analytics.duckdb`)
+- `DUCKDB_PATH=/opt/render/project/src/data/analytics.duckdb`
 
 Notes:
 - On free plans, filesystem persistence is limited; DuckDB may be rebuilt on restart.
-- Startup auto-load uses `src/analytics/duckdb/load_duckdb.py` when DB file is missing.
+- Startup auto-load uses `src/analytics/duckdb/load_duckdb.py` when DB file is missing and `AUTOLOAD_DUCKDB=1`.
 - On Render free instances, the API may spin down after ~15 minutes of inactivity.
 - First request after inactivity may take up to ~60 seconds (cold start).
 - For demos, pre-warm the API by opening `/health` before loading the dashboard.
+- If you do not provide curated parquet files on Render, avoid `AUTOLOAD_DUCKDB=1` unless those parquet inputs exist.
 
 ## Deployment Architecture (Current)
 
@@ -219,3 +229,5 @@ Repository note:
 - If DuckDB lock conflicts appear, close the process holding `data/analytics.duckdb`.
 - In JupyterHub, use proxy URLs instead of localhost ports.
 - Airflow orchestration example is provided under `airflow/`.
+- `fetch_cisa_kev.py` writes JSON by default; use `known_exploited_vulnerabilities.json` or copy/alias to `cisa_kev_catalog.json` for current transformation scripts.
+- `load_duckdb.py` requires curated parquet tables; ensure `pyarrow` is installed so parquet outputs are generated.
