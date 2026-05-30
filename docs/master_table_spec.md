@@ -2,7 +2,7 @@
 
 This document is the formal summary deliverable for the `Data Integration Owner` and defines the core integrated master table used in this project.
 
-For the broader project schema, also see [docs/current_schema.md](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docs/current_schema.md).
+For the broader project schema, also see [docs/current_schema.md](docs/current_schema.md).
 
 ## Table Overview
 
@@ -109,11 +109,11 @@ Current rules:
 
 ## Current Physical Outputs
 
-- [data/curated/vulnerability_priority/vulnerability_priority_latest.csv](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/data/curated/vulnerability_priority/vulnerability_priority_latest.csv)
-- [data/curated/vulnerability_priority/vulnerability_priority_latest.jsonl](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/data/curated/vulnerability_priority/vulnerability_priority_latest.jsonl)
-- [data/curated/vulnerability_priority/vulnerability_priority_latest.parquet](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/data/curated/vulnerability_priority/vulnerability_priority_latest.parquet)
+- [data/curated/vulnerability_priority/vulnerability_priority_latest.csv](data/curated/vulnerability_priority/vulnerability_priority_latest.csv)
+- [data/curated/vulnerability_priority/vulnerability_priority_latest.jsonl](data/curated/vulnerability_priority/vulnerability_priority_latest.jsonl)
+- [data/curated/vulnerability_priority/vulnerability_priority_latest.parquet](data/curated/vulnerability_priority/vulnerability_priority_latest.parquet)
 
 ## Related Documents
 
-- [docs/schema_mapping.md](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docs/schema_mapping.md)
-- [docs/data_dictionary.md](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docs/data_dictionary.md)
+- [docs/schema_mapping.md](docs/schema_mapping.md)
+- [docs/data_dictionary.md](docs/data_dictionary.md)

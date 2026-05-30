@@ -22,7 +22,7 @@ It does not replace the existing Python ETL scripts.
 
 ## Script
 
-- [mongo_to_parquet_pyspark.py](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/src/transformation/spark/mongo_to_parquet_pyspark.py)
+- [mongo_to_parquet_pyspark.py](src/transformation/spark/mongo_to_parquet_pyspark.py)
 
 ## Example Command
 

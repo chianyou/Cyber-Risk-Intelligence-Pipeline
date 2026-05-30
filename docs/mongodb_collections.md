@@ -74,5 +74,5 @@ Suggested indexes:
 - raw collections should preserve full payloads without flattening fields first
 - if the assignment requires a document database design, this file can be used directly as a deliverable
 - downstream joins and analytics should not be done directly in MongoDB
-- use [docker-compose.yml](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docker-compose.yml) to start MongoDB locally
-- use [load_raw_snapshots.py](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/src/storage/mongodb/load_raw_snapshots.py) to load raw snapshots into these collections
+- use [docker-compose.yml](docker-compose.yml) to start MongoDB locally
+- use [load_raw_snapshots.py](src/storage/mongodb/load_raw_snapshots.py) to load raw snapshots into these collections

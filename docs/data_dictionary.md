@@ -95,5 +95,5 @@ At minimum, this table should validate:
 
 This is the current first version of the master table specification. If new sources or columns are added, update both:
 
-- [docs/schema_mapping.md](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docs/schema_mapping.md)
-- [docs/data_dictionary.md](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docs/data_dictionary.md)
+- [docs/schema_mapping.md](docs/schema_mapping.md)
+- [docs/data_dictionary.md](docs/data_dictionary.md)

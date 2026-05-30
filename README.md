@@ -1,6 +1,6 @@
-# UCL Data Engineering Group Assignment
+# Cyber Risk Intelligence Pipeline
 
-This repository implements a cyber-risk data engineering pipeline using NVD, CISA KEV, EPSS, and cvelistV5.
+An end-to-end data engineering pipeline for cyber vulnerability analytics, integrating NVD, CISA KEV, EPSS, and cvelistV5 into a queryable analytics layer with a live dashboard.
 
 ## End-to-End Flow
 
@@ -196,7 +196,7 @@ Example production URL pattern:
 
 Current setup example:
 
-- `https://chianyou.github.io/UCL-Data-Engineering-Group-Assignment/dashboard/?api_base=https://cyber-risk-api.onrender.com`
+- `https://<github-user>.github.io/<repo-name>/dashboard/?api_base=https://cyber-risk-api.onrender.com`
 
 ## Data Lineage
 

@@ -94,8 +94,8 @@ Recommended usage in this project:
 
 Implementation status in this repo:
 
-- MongoDB runtime is provided via [docker-compose.yml](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docker-compose.yml)
-- raw snapshot loading is implemented in [load_raw_snapshots.py](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/src/storage/mongodb/load_raw_snapshots.py)
+- MongoDB runtime is provided via [docker-compose.yml](docker-compose.yml)
+- raw snapshot loading is implemented in [load_raw_snapshots.py](src/storage/mongodb/load_raw_snapshots.py)
 
 Reasons:
 
@@ -212,10 +212,10 @@ The `Storage / Database Owner` should deliver at minimum:
 
 Related files already included in this repo:
 
-- [docs/storage_architecture.md](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docs/storage_architecture.md)
-- [sql/postgres/01_create_schemas.sql](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/sql/postgres/01_create_schemas.sql)
-- [sql/postgres/02_create_tables.sql](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/sql/postgres/02_create_tables.sql)
-- [sql/postgres/03_create_indexes.sql](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/sql/postgres/03_create_indexes.sql)
-- [docs/mongodb_collections.md](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docs/mongodb_collections.md)
-- [docker-compose.yml](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/docker-compose.yml)
-- [src/storage/mongodb/load_raw_snapshots.py](/Users/bettylin/Documents/UCL-Data-Engineering-Group-Assignment/src/storage/mongodb/load_raw_snapshots.py)
+- [docs/storage_architecture.md](docs/storage_architecture.md)
+- [sql/postgres/01_create_schemas.sql](sql/postgres/01_create_schemas.sql)
+- [sql/postgres/02_create_tables.sql](sql/postgres/02_create_tables.sql)
+- [sql/postgres/03_create_indexes.sql](sql/postgres/03_create_indexes.sql)
+- [docs/mongodb_collections.md](docs/mongodb_collections.md)
+- [docker-compose.yml](docker-compose.yml)
+- [src/storage/mongodb/load_raw_snapshots.py](src/storage/mongodb/load_raw_snapshots.py)
